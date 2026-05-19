@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hakayaa</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" defer></script>
+</head>
+<body class="home-page">
+<div class="cursor-dot"></div>
+<nav class="navbar">
+<a class="logo" href="index.html" aria-label="Hakayaa Home">
+<img src="assets/images/hakaya-logo.png" alt="Hakayaa">
+</a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<ul class="nav-links" id="site-navigation">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="team.html">Team</a></li>
+<!-- <li><a href="industries.html">Industries</a></li> -->
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+</nav>
+
+<main>
+<section class="s1" aria-label="Hakayaa story hook">
+<div class="s1-geo" aria-hidden="true"></div>
+<div class="s1-blob s1-blob-1" aria-hidden="true"></div>
+<div class="s1-blob s1-blob-2" aria-hidden="true"></div>
+<div class="s1-inner">
+<div class="s1-left">
+<div class="s1-eyebrow">A universal truth</div>
+<h1 class="s1-h1">
+<span class="s1-word">Everything&nbsp;</span>
+<span class="s1-word">in&nbsp;the&nbsp;</span>
+<span class="s1-word">world&nbsp;is&nbsp;</span>
+<span class="s1-word italic">a&nbsp;story.</span>
+</h1>
+<!-- <p class="s1-sub">Songs, pictures, books - even content. Memes, GIFs, trending audios. All stories in different forms.</p> -->
+<div class="s1-actions">
+<a href="services.html" class="btn-primary">Our Work</a>
+<a href="about.html" class="btn-ghost">How We Work</a>
+</div>
+</div>
+<div class="s1-right">
+<div class="s1-forms-label">Stories we craft</div>
+<div class="s1-forms">
+<div class="s1-form-card">
+<span class="icon">&#9678;</span>
+<span class="label">Content</span>
+<span class="desc">Brand narratives that move</span>
+</div>
+<div class="s1-form-card">
+<span class="icon">&#9834;</span>
+<span class="label">Audio</span>
+<span class="desc">Sonic identity &amp; sound</span>
+</div>
+<div class="s1-form-card">
+<span class="icon">&#10022;</span>
+<span class="label">Spatial</span>
+<span class="desc">Immersive experiences</span>
+</div>
+<div class="s1-form-card">
+<span class="icon">&#8779;</span>
+<span class="label">Data</span>
+<span class="desc">Insight-powered strategy</span>
+</div>
+</div>
+</div>
+</div>
+<div class="s1-scroll" aria-hidden="true">
+<div class="s1-scroll-line"></div>
+<span></span>
+</div>
+</section>
+
+<section class="s2" aria-label="The many forms of story">
+<div class="s2-left">
+<div class="s2-tag" id="s2tag">The many forms of story</div>
+<span class="s2-line xl" id="l1"><span class="g">Songs.</span> Pictures.</span>
+<span class="s2-line xl" id="l2">Books. <span class="g">Content.</span></span>
+<span class="s2-line lg" id="l3">The most <span class="l">advanced</span></span>
+<span class="s2-line lg" id="l4">form of storytelling.</span>
+<span class="s2-line s2-line-small" id="l5">Memes, GIFs, trending audios - all stories.</span>
+</div>
+<div class="s2-right">
+<div class="s2-grid" id="s2grid">
+<div class="s2-cell">
+<div class="s2-cell-num">01</div>
+<div class="s2-cell-label">Uncover</div>
+<div class="s2-cell-desc">Find the true story beneath your brand</div>
+</div>
+<div class="s2-cell">
+<div class="s2-cell-num">02</div>
+<div class="s2-cell-label">Craft</div>
+<div class="s2-cell-desc">Shape it across content &amp; audio</div>
+</div>
+<div class="s2-cell">
+<div class="s2-cell-num">03</div>
+<div class="s2-cell-label">Amplify</div>
+<div class="s2-cell-desc">Powered by data &amp; consumer insight</div>
+</div>
+<div class="s2-cell">
+<div class="s2-cell-num">04</div>
+<div class="s2-cell-label">Elevate</div>
+<div class="s2-cell-desc">Become a legend, not just a brand</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="s3" aria-label="Hakayaa story solution">
+<div class="s3-left">
+<p class="s3-quote" id="s3q">"But not every business knows how to tell its story."</p>
+<h2 class="s3-h2" id="s3h">That's where<br><em>we come in.</em></h2>
+<p class="s3-body" id="s3b">We go beyond the product pitch to uncover your true story and craft it through content, audio, and spatial experiences - powered by data, consumer insight, and technology. We elevate your brand's story.</p>
+<div class="s3-cta" id="s3cta">
+<a href="contact.html">Begin Your Story &rarr;</a>
+</div>
+</div>
+<div class="s3-right" id="s3r">
+<div class="s3-pillars">
+<div class="s3-pillar"><span>Content</span><div class="dot"></div></div>
+<div class="s3-pillar"><span>Audio</span><div class="dot"></div></div>
+<div class="s3-pillar"><span>Spatial Experiences</span><div class="dot"></div></div>
+<div class="s3-pillar"><span>Data Strategy</span><div class="dot"></div></div>
+<div class="s3-pillar"><span>Consumer Insight</span><div class="dot"></div></div>
+<div class="s3-pillar"><span>Technology</span><div class="dot"></div></div>
+</div>
+</div>
+
+</section>
+
+<section class="section pillar-section fade-section scroll-section" aria-label="Hakayaa logo motion">
+<figure class="animated-banner">
+<video class="animated-banner-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+<source src="assets/images/waves-for-logo.mp4" type="video/mp4">
+</video>
+</figure>
+</section>
+
+<section class="section services-section fade-section scroll-section">
+<div class="section-heading">
+<h2 class="section-title services-main-title">SIX PILLARS. ONE ECOSYSTEM. END-TO-END CREATION.</h2>
+</div>
+<figure class="services-banner">
+<div class="banner-wrap" role="img" aria-label="Hakayaa six pillars: Consumer, Sonic, Data, Creative, Tech, Business">
+<div class="panel panel-consumer">
+<div class="panel-photo"></div>
+<div class="panel-noise"></div>
+<div class="panel-text">
+<div class="panel-label">
+<span class="panel-num">01</span>
+<span class="panel-divider"></span>
+<span class="panel-category">Consumer Intelligence</span>
+</div>
+<h2 class="panel-title">Consumer</h2>
+<p class="panel-tagline">From Audience to Human.<br>From Attention to Connection.</p>
+</div>
+</div>
+<div class="panel panel-sonic">
+<div class="panel-photo"></div>
+<div class="panel-noise"></div>
+<div class="panel-text">
+<div class="panel-label">
+<span class="panel-num">02</span>
+<span class="panel-divider"></span>
+<span class="panel-category">Sonic Identity &amp; Audio</span>
+</div>
+<h2 class="panel-title">Sonic</h2>
+<p class="panel-tagline">From Noise to Narrative.<br>From Sound to Memory.</p>
+</div>
+</div>
+<div class="panel panel-data">
+<div class="panel-photo"></div>
+<div class="panel-noise"></div>
+<div class="panel-text">
+<div class="panel-label">
+<span class="panel-num">03</span>
+<span class="panel-divider"></span>
+<span class="panel-category">Data, AI &amp; Engineering</span>
+</div>
+<h2 class="panel-title">Data</h2>
+<p class="panel-tagline">From Information to Intelligence.<br>From Guesswork to Certainty.</p>
+</div>
+</div>
+<div class="panel panel-creative">
+<div class="panel-photo"></div>
+<div class="panel-noise"></div>
+<div class="panel-text">
+<div class="panel-label">
+<span class="panel-num">04</span>
+<span class="panel-divider"></span>
+<span class="panel-category">Creative Ideation &amp; Copy</span>
+</div>
+<h2 class="panel-title">Creative</h2>
+<p class="panel-tagline">From Ideas to Impact.<br>From Noise to Something Unforgettable.</p>
+</div>
+</div>
+<div class="panel panel-tech">
+<div class="panel-photo"></div>
+<div class="panel-noise"></div>
+<div class="panel-text">
+<div class="panel-label">
+<span class="panel-num">05</span>
+<span class="panel-divider"></span>
+<span class="panel-category">Tech, UX &amp; Digital Experience</span>
+</div>
+<h2 class="panel-title">Tech</h2>
+<p class="panel-tagline">From Idea to Interface.<br>From Complexity to Clarity.</p>
+</div>
+</div>
+<div class="panel panel-business">
+<div class="panel-photo"></div>
+<div class="panel-noise"></div>
+<div class="panel-text">
+<div class="panel-label">
+<span class="panel-num">06</span>
+<span class="panel-divider"></span>
+<span class="panel-category">Business Strategy &amp; Operations</span>
+</div>
+<h2 class="panel-title">Business</h2>
+<p class="panel-tagline">From Vision to System.<br>From Idea to Outcome.</p>
+</div>
+</div>
+</div>
+</figure>
+<div class="service-grid">
+</div>
+</section>
+
+<section class="section team-preview-section fade-section">
+<div class="team-preview-shell">
+<div class="team-preview-header">
+<p class="section-kicker team-preview-kicker">The Team Behind The Narrative</p>
+<h2 class="section-title team-preview-title">A compact team built to make brands feel sharper, smarter, and unmistakably premium.</h2>
+<p class="section-intro team-preview-intro">Strategy, creative, sonic identity, and technology sit at the same table here. That means fewer handoffs, stronger thinking, and a team that moves like one studio instead of six separate vendors.</p>
+</div>
+<div class="team-preview-grid">
+<a class="team-story team-story-link" href="team.html#naveen-krish">
+<span class="team-story-index">01</span>
+<h3>Naveen Krish</h3>
+<p class="team-role">Chief "Let's Do This" Officer</p>
+<p>Keeps the chaos in check and the plan moving with calm, clear momentum.</p>
+</a>
+<a class="team-story team-story-link" href="team.html#vidya-nair">
+<span class="team-story-index">02</span>
+<h3>Vidya Nair</h3>
+<p class="team-role">Chief Vibe Officer</p>
+<p>Translates audience instinct into brand energy people actually feel and remember.</p>
+</a>
+<a class="team-story team-story-link" href="team.html#nithish-pranao">
+<span class="team-story-index">03</span>
+<h3>Nithish Pranao</h3>
+<p class="team-role">Head Of Sonic Alchemy</p>
+<p>Builds sound worlds that make the brand stick in memory long after the ad ends.</p>
+</a>
+<a class="team-story team-story-link" href="team.html#gaurav">
+<span class="team-story-index">04</span>
+<h3>Gaurav</h3>
+<p class="team-role">Head of "Wait, That's Actually Brilliant"</p>
+<p>Turns abstract sparks into bold campaign ideas with edge, clarity, and charm.</p>
+</a>
+<a class="team-story team-story-link" href="team.html#sreeha-mr">
+<span class="team-story-index">05</span>
+<h3>Sreeha M R</h3>
+<p class="team-role">Head of Pattern Breaking &amp; Making Sense</p>
+<p>Finds the pattern in the noise and turns complexity into usable strategic direction.</p>
+</a>
+<a class="team-story team-story-link" href="team.html#vedika-gaonphale">
+<span class="team-story-index">06</span>
+<h3>Vedika Gaonphale</h3>
+<p class="team-role">Manager of Bringing Tech Alive</p>
+<p>Shapes digital experiences that feel polished, intuitive, and far easier than they are.</p>
+</a>
+</div>
+</div>
+</section>
+
+<section class="founders-section" aria-label="Who We Want To Work With">
+<div class="founders-bg" aria-hidden="true"></div>
+<div class="founders-shell">
+<div class="founders-header js-founders-reveal">
+<p class="founders-kicker">Who We Want To Work With</p>
+<h2 class="founders-title">Stories We&nbsp;Want<br>To&nbsp;Write.</h2>
+<p class="founders-sub">We work with a limited number of brands at a time - so we can go deep, not just fast. Four kinds of founders. One shared ambition.</p>
+</div>
+<div class="founders-grid">
+<figure class="founders-card js-founders-reveal">
+<div class="founders-photo-wrap">
+<div class="founders-photo founders-photo-1" role="img" aria-label="Founder portrait 1"></div>
+<div class="founders-photo-overlay"></div>
+</div>
+<figcaption class="founders-caption">
+<span class="founders-chip">Founders Who Want Real Growth</span>
+<p>Ambitious enough to build something that lasts. Tired of short-term noise.</p>
+</figcaption>
+</figure>
+<figure class="founders-card js-founders-reveal">
+<div class="founders-photo-wrap">
+<div class="founders-photo founders-photo-2" role="img" aria-label="Founder portrait 2"></div>
+<div class="founders-photo-overlay"></div>
+</div>
+<figcaption class="founders-caption">
+<span class="founders-chip">Brands That Feel Stuck or Unclear</span>
+<p>You know the product is great. The story just hasn't caught up yet.</p>
+</figcaption>
+</figure>
+<figure class="founders-card js-founders-reveal">
+<div class="founders-photo-wrap">
+<div class="founders-photo founders-photo-3" role="img" aria-label="Founder portrait 3"></div>
+<div class="founders-photo-overlay"></div>
+</div>
+<figcaption class="founders-caption">
+<span class="founders-chip">Teams Tired Of Multiple Agencies</span>
+<p>Strategy here, creative there, data somewhere else. Let's fix that.</p>
+</figcaption>
+</figure>
+<figure class="founders-card js-founders-reveal">
+<div class="founders-photo-wrap">
+<div class="founders-photo founders-photo-4" role="img" aria-label="Founder portrait 4"></div>
+<div class="founders-photo-overlay"></div>
+</div>
+<figcaption class="founders-caption">
+<span class="founders-chip">Businesses Focused On Long-Term Results</span>
+<p>You're not chasing the quarter. You're building a legend.</p>
+</figcaption>
+</figure>
+</div>
+<div class="founders-cta js-founders-reveal">
+<p class="founders-cta-copy">Sound like you? Let's start the conversation.</p>
+<a href="contact.html" class="founders-cta-btn">Begin Your Story&nbsp;&rarr;</a>
+</div>
+</div>
+</section>
+<section class="section brands-section fade-section scroll-section">
+<div class="brands-shell">
+<div class="section-heading brands-heading">
+<p class="section-kicker brands-kicker">Stories Written By Us So Far</p>
+<h2 class="section-title brands-title">Narrative shaped across categories, audiences, and growth stages.</h2>
+<p class="section-intro brands-intro">From household names to fast-moving challenger brands, we have supported positioning, storytelling, production, and growth across a wide mix of industries without losing the craft.</p>
+<div class="brands-meta" aria-label="Brand collaboration highlights">
+<span>Legacy brands</span>
+<span>Consumer growth stories</span>
+<span>Strategy, creative, and production</span>
+</div>
+</div>
+<figure class="brand-logos-figure">
+<img src="assets/images/brandslogos.svg" alt="Brand logos">
+</figure>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="footer-container">
+<div class="footer-logo">
+<img src="assets/images/hakaya-logo.png" alt="Hakayaa">
+<p>Hakayaa moves brands from noise to narrative and from attention to heartspace.</p>
+</div>
+<div class="footer-links">
+<h3>Pages</h3>
+<ul>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="team.html">Team</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="footer-links">
+<h3>Contact</h3>
+<p>Email: sales@hakayaa.co.in</p>
+<p>Phone: +91 9176466366</p>
+<a href="contact.html" class="footer-link-inline">Work with Hakayaa</a>
+<div class="footer-socials" aria-label="Hakayaa social links">
+<img src="assets/images/icon-whatsapp.svg" alt="WhatsApp">
+<img src="assets/images/icon-linkedin.svg" alt="LinkedIn">
+<img src="assets/images/icon-facebook.svg" alt="Facebook">
+<img src="assets/images/icon-instagram.svg" alt="Instagram">
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 Hakayaa. All rights reserved.</p>
+</div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Hakayaa</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body class="services-page">
+
+<div class="cursor-dot"></div>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav class="navbar" id="navbar">
+  <a class="logo" href="index.html" aria-label="Hakayaa Home">
+    <img src="assets/images/hakaya-logo.png" alt="Hakayaa" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+    <span class="logo-fallback">HAKAYAA</span>
+  </a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="site-navigation">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html" class="nav-active">Services</a></li>
+    <li><a href="team.html">Team</a></li>
+    <!-- <li><a href="industries.html">Industries</a></li> -->
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="services-hero" aria-label="Services hero">
+  <div class="hero-geo" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
+  <div class="services-hero-shell">
+    <div class="hero-eyebrow js-reveal">
+      <span class="eyebrow-line"></span>
+      What Do We Do That Others Don't
+      <span class="eyebrow-line"></span>
+    </div>
+
+    <p class="hero-not-menu js-reveal">This is not a menu. This is a growth system.</p>
+
+    <h1 class="hero-title js-reveal">
+      Most agencies<br>sell services.<br>
+      <span class="hero-title-accent">We don't.</span>
+    </h1>
+
+    <div class="hero-divider js-reveal"></div>
+
+    <p class="hero-sub js-reveal">
+      Services work in isolation. Growth doesn't. So instead of giving you pieces, we built an <em>ecosystem where everything connects</em> — six pillars, each powerful on its own, unstoppable when they work together.
+    </p>
+
+    <div class="hero-pills js-reveal">
+      <a href="#pillar-consumer" class="hero-pill">Consumer</a>
+      <a href="#pillar-sonic"    class="hero-pill">Sonic</a>
+      <a href="#pillar-data"     class="hero-pill">Data</a>
+      <a href="#pillar-creative" class="hero-pill">Creative</a>
+      <a href="#pillar-tech"     class="hero-pill">Tech</a>
+      <a href="#pillar-business" class="hero-pill">Business</a>
+    </div>
+  </div>
+
+  <!-- <div class="hero-scroll-cue" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span></span>
+  </div> -->
+</section>
+
+<!-- ═══ BRIDGE ═══ -->
+<!-- <section class="services-bridge js-fade-section">
+  <div class="bridge-watermark" aria-hidden="true">SIX PILLARS</div>
+  <div class="bridge-inner">
+    <div class="bridge-left">
+      <p class="section-kicker">One Ecosystem. End-to-End Creation.</p>
+      <h2 class="bridge-title">Six pillars.<br><span>One story.</span></h2>
+      <p class="bridge-body">We go beyond the product pitch to uncover your true story — and craft it through content, audio, and spatial experiences. Powered by data, consumer insight, and technology. Not just campaigns. Emotional connections, cultural relevance, and brands people instinctively choose.</p>
+    </div>
+    <div class="bridge-grid">
+      <div class="bridge-cell"><div class="bc-num">01</div><div class="bc-label">Uncover</div><div class="bc-desc">Find the true story beneath your brand</div></div>
+      <div class="bridge-cell"><div class="bc-num">02</div><div class="bc-label">Craft</div><div class="bc-desc">Shape it across content, audio &amp; experience</div></div>
+      <div class="bridge-cell"><div class="bc-num">03</div><div class="bc-label">Amplify</div><div class="bc-desc">Powered by data &amp; consumer insight</div></div>
+      <div class="bridge-cell"><div class="bc-num">04</div><div class="bc-label">Elevate</div><div class="bc-desc">Become a legend, not just a brand</div></div>
+    </div>
+  </div>
+</section> -->
+
+<!-- ═══ PILLARS ═══ -->
+<section class="services-pillars">
+  <div class="services-pillars-shell">
+
+    <!-- ── 01 CONSUMER ── -->
+    <article class="pillar-block pillar-alt" id="pillar-consumer" data-pillar="01">
+      <div class="pillar-sticky-label" aria-hidden="true">CONSUMER</div>
+
+      <div class="pillar-header">
+        <div class="pillar-badge">01</div>
+        <div class="pillar-header-text">
+          <p class="pillar-kicker">Consumer Intelligence &amp; 360° Advertising</p>
+          <h2 class="pillar-name">Consumer</h2>
+          <p class="pillar-tagline">From Audience to Human. From Attention to Connection.</p>
+        </div>
+      </div>
+
+      <div class="pillar-philosophy">
+        <div class="philosophy-header">
+          <span class="philosophy-label">HAKAYA CONSUMER PHILOSOPHY</span>
+        </div>
+        <div class="philosophy-grid">
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>We don't see consumers. We see people.</strong> People are contradictions — they say one thing, do another, feel something they can't always explain.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Insight is not information. It's tension.</strong> It lives in the gap between desire and reality, contradiction between belief and behaviour, and the unspoken truth people carry.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Logic justifies. Emotion decides.</strong> People choose what reflects who they are, what aligns with how they feel, and what fits into their world effortlessly.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Attention is earned in seconds. Relevance is built over time.</strong> We don't chase moments. We build meaning that compounds.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Culture is the context of choice.</strong> We decode trends, conversations, communities, and identity to place brands within culture meaningfully.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>The best brands don't interrupt. They belong.</strong> They fit naturally into people's lives instead of forcing attention.</p></div>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="svc-card"><div class="svc-num">01</div><h3>Deep Consumer Intelligence</h3><p>Qualitative &amp; quantitative research, behavioural and cultural analysis, persona development, emotional trigger mapping, decision journey decoding, and category psychology.</p></div>
+        <div class="svc-card"><div class="svc-num">02</div><h3>Brand Strategy &amp; Positioning</h3><p>Brand architecture, positioning frameworks, messaging hierarchies, and differentiation strategies that create instinctive choice.</p></div>
+        <div class="svc-card"><div class="svc-num">03</div><h3>Creative Strategy &amp; Big Ideas</h3><p>Campaign platforms, narrative building, and integrated storytelling systems that make brands unforgettable.</p></div>
+        <div class="svc-card"><div class="svc-num">04</div><h3>Content Ecosystem Design</h3><p>Always-on strategy, platform-specific storytelling, and culture-first content that earns real belonging.</p></div>
+        <div class="svc-card"><div class="svc-num">05</div><h3>Influencer &amp; Creator Strategy</h3><p>Influencer mapping, campaign design, creator collaborations, and amplification frameworks tied to real brand truth.</p></div>
+        <div class="svc-card"><div class="svc-num">06</div><h3>Go-To-Market Strategy</h3><p>Product launches, market entry frameworks, communication rollouts, and 360° campaign execution across films, social, PR, and earned media.</p></div>
+        <div class="svc-card"><div class="svc-num">07</div><h3>Experiential &amp; Culture-Led Activations</h3><p>Brand experiences, on-ground activations, community-led campaigns, and founder &amp; personal branding.</p></div>
+        <div class="svc-card"><div class="svc-num">08</div><h3>Cultural Strategy &amp; Virality Design</h3><p>Trend forecasting, meme strategy, cultural moment integration, performance-driven creative systems, and brand transformation consulting.</p></div>
+      </div>
+
+      <div class="pillar-value">
+        <span class="pv-label">The Real Value</span>
+        <p>Find the truth, turn it into a hook, scale it into growth. Not just campaigns — emotional connections, cultural relevance, and brands people instinctively choose.</p>
+        <p class="pv-quote"><em>"If you understand people, you don't chase attention. You become the obvious choice."</em></p>
+      </div>
+    </article>
+
+    <!-- ── 02 SONIC ── -->
+    <article class="pillar-block pillar-alt" id="pillar-sonic" data-pillar="02">
+      <div class="pillar-sticky-label" aria-hidden="true">SONIC</div>
+
+      <div class="pillar-header">
+        <div class="pillar-badge">02</div>
+        <div class="pillar-header-text">
+          <p class="pillar-kicker">Sonic Identity &amp; Audio Strategy</p>
+          <h2 class="pillar-name">Sonic</h2>
+          <p class="pillar-tagline">From Noise to Narrative. From Sound to Memory.</p>
+        </div>
+      </div>
+
+      <div class="pillar-philosophy">
+        <div class="philosophy-header">
+          <span class="philosophy-label">HAKAYA SONIC PHILOSOPHY</span>
+        </div>
+        <div class="philosophy-grid">
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>We don't make music. We build meaning.</strong> Sound is not what sits behind the story. It anchors it, carries it, and makes it unforgettable.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>The fastest way to be remembered is not visual. It's sonic.</strong> A note, a tone, a texture — it bypasses logic and lands straight in memory.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Every brand already has a sound. Most just haven't claimed it yet.</strong> We turn ambient noise into a distinct, ownable voice — consistent, scalable, unmistakably yours.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Sonic identity is not a jingle. It's a system.</strong> How your brand builds anticipation, signals trust, celebrates, alerts — across screens, spaces, and moments.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Emotion is the product. Sound is the shortcut.</strong> Warmth without words, energy without visuals, trust without explanation.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Consistency builds memory. Variation builds culture.</strong> We build sonic systems that stay recognisable yet adapt across formats, trends, and platforms.</p></div>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="svc-card"><div class="svc-num">01</div><h3>Sonic Branding Foundations</h3><p>Sonic logos, brand themes, sound palettes, audio mood boards, and voice tonality systems — a consistent, ownable sound identity.</p></div>
+        <div class="svc-card"><div class="svc-num">02</div><h3>Advertising &amp; Campaign Audio</h3><p>Ad film scores, high-recall jingles, campaign soundtracks, product sound design, multi-language adaptations, and platform versioning.</p></div>
+        <div class="svc-card"><div class="svc-num">03</div><h3>Social &amp; Content Audio</h3><p>Instagram Reels strategy, viral sound creation, trend adaptation, branded audio hooks, sonic formats, and creator-ready sound kits.</p></div>
+        <div class="svc-card"><div class="svc-num">04</div><h3>Brand Sound Libraries</h3><p>UI/UX sounds, notification &amp; interaction tones, retail environments, and always-on subscription sound banks.</p></div>
+        <div class="svc-card"><div class="svc-num">05</div><h3>Experiential &amp; Spatial Sound</h3><p>Event soundscapes, launch environments, exhibition installations, and multi-sensory brand experiences synced across all modalities.</p></div>
+        <div class="svc-card"><div class="svc-num">06</div><h3>Music Production &amp; Innovation</h3><p>Full tracks, background scores, artist collaborations, licensing, AI-assisted production, generative audio, and music-tech digital products.</p></div>
+      </div>
+
+      <div class="pillar-value">
+        <span class="pv-label">The Real Value</span>
+        <p>Faster recall, stronger emotional signatures, and a brand that lives beyond screens — into spaces, devices, and the minds of people who've never even seen your logo.</p>
+        <p class="pv-quote"><em>"To be felt without being seen."</em></p>
+      </div>
+    </article>
+
+    <!-- ── 03 DATA ── -->
+    <article class="pillar-block pillar-alt" id="pillar-data" data-pillar="03">
+      <div class="pillar-sticky-label" aria-hidden="true">DATA</div>
+
+      <div class="pillar-header">
+        <div class="pillar-badge">03</div>
+        <div class="pillar-header-text">
+          <p class="pillar-kicker">Data, AI &amp; Engineering</p>
+          <h2 class="pillar-name">Data</h2>
+          <p class="pillar-tagline">From Information to Intelligence. From Guesswork to Certainty.</p>
+        </div>
+      </div>
+
+      <div class="pillar-intro-statement">
+        Data is everywhere. Clarity isn't. We don't give you more numbers. We give you direction.
+      </div>
+
+      <div class="pillar-philosophy">
+        <div class="philosophy-header">
+          <span class="philosophy-label">HAKAYA DATA PHILOSOPHY</span>
+        </div>
+        <div class="philosophy-grid">
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>We don't look at data. We interrogate it.</strong> What is it really telling us? What is it hiding? What has it not said yet?</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Data without action is noise.</strong> Every data point must lead to a decision, a direction, or a disruption. Decoration has no place here.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>The real problem is rarely the obvious one.</strong> We go deeper — past symptoms to find operational gaps, behavioural patterns, and system inefficiencies.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>We build systems, not reports.</strong> Reports explain the past. Systems shape the future — continuously learning, adapting, predicting.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Automation is leverage, not efficiency.</strong> We build workflows where data flows automatically, insights generate themselves, and actions trigger in real time.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Proof over promise. Always.</strong> Every recommendation is backed by data, every outcome is measurable, every decision is accountable.</p></div>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="svc-card"><div class="svc-num">01</div><h3>Data Strategy &amp; Architecture</h3><p>End-to-end infrastructure design, collection frameworks, warehousing, pipeline development, and automation. A clean, reliable, scalable data foundation.</p></div>
+        <div class="svc-card"><div class="svc-num">02</div><h3>Business Intelligence &amp; Analytics</h3><p>Real-time dashboards, KPI tracking, revenue analytics, cohort analysis, funnel optimisation, retention modelling, and churn prediction.</p></div>
+        <div class="svc-card"><div class="svc-num">03</div><h3>AI &amp; Machine Learning</h3><p>Custom ML models, recommendation engines, classification &amp; clustering, anomaly detection, and LLMs for document processing and automation.</p></div>
+        <div class="svc-card"><div class="svc-num">04</div><h3>Predictive &amp; Prescriptive Analytics</h3><p>Sales forecasting, demand prediction, pricing optimisation, and scenario simulation. Move from reactive to proactive decision-making.</p></div>
+        <div class="svc-card"><div class="svc-num">05</div><h3>Competitive Intelligence</h3><p>Competitor pricing tracking, market trend analysis, real-time benchmarking dashboards, and customer personalisation engines.</p></div>
+        <div class="svc-card"><div class="svc-num">06</div><h3>Industry-Specific Solutions</h3><p>Retail &amp; FMCG, manufacturing, aviation and logistics — plus generative AI, AI copilots, self-learning systems, and decision automation engines.</p></div>
+      </div>
+
+      <div class="pillar-value">
+        <span class="pv-label">The Real Value</span>
+        <p>Every decision is measured, every strategy is validated, every outcome is continuously optimised. Not dashboards — decision engines, intelligence systems, and self-improving businesses.</p>
+        <p class="pv-quote"><em>"Clarity at scale."</em></p>
+      </div>
+    </article>
+
+    <!-- ── 04 CREATIVE ── -->
+    <article class="pillar-block pillar-alt" id="pillar-creative" data-pillar="04">
+      <div class="pillar-sticky-label" aria-hidden="true">CREATIVE</div>
+
+      <div class="pillar-header">
+        <div class="pillar-badge">04</div>
+        <div class="pillar-header-text">
+          <p class="pillar-kicker">Creative Ideation &amp; Copy</p>
+          <h2 class="pillar-name">Creative</h2>
+          <p class="pillar-tagline">From Ideas to Impact. From Noise to Something You Can't Scroll Past.</p>
+        </div>
+      </div>
+
+      <div class="pillar-philosophy">
+        <div class="philosophy-header">
+          <span class="philosophy-label">HAKAYA CREATIVE PHILOSOPHY</span>
+        </div>
+        <div class="philosophy-grid">
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>We don't create content. We create reaction.</strong> If it doesn't stop people, move them, or make them share — it doesn't deserve to exist.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>The idea is everything.</strong> Formats change. Platforms change. Algorithms change. A strong idea still wins. We build ideas people remember.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Safe doesn't scale.</strong> The biggest risk today isn't failure. It's being ignored. We push for work that stands out, feels fresh, earns attention.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Culture is not a trend. It's a language.</strong> We understand how people talk, what they share, what they care about — and make brands speak that language.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Clarity beats cleverness.</strong> If people don't get it instantly, they move on. Simple, sharp, and immediately understood is the hardest thing to build.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Emotion drives memory.</strong> People remember how something made them feel — relatability, humour, aspiration, tension.</p></div>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="svc-card"><div class="svc-num">01</div><h3>Campaign Ideation &amp; Big Ideas</h3><p>Campaign concepts, platform thinking, creative territories, and hook development. Ideas that earn attention across every touchpoint.</p></div>
+        <div class="svc-card"><div class="svc-num">02</div><h3>Scripts, Films &amp; Storyboards</h3><p>Performance ads, brand films, launch videos, story-driven campaigns, visual storytelling, and shot breakdowns for creative supervision.</p></div>
+        <div class="svc-card"><div class="svc-num">03</div><h3>Social &amp; Content Creation</h3><p>Reels, carousels, static content, trend-based ideas, content ecosystems, and always-on storytelling plans that sustain brand energy.</p></div>
+        <div class="svc-card"><div class="svc-num">04</div><h3>Copywriting &amp; Brand Voice</h3><p>Websites, taglines, campaign language, e-commerce PDPs, A+ content, thought leadership, and SEO content designed to convert and connect.</p></div>
+        <div class="svc-card"><div class="svc-num">05</div><h3>Cultural &amp; Trend Content</h3><p>Meme integration, trend hijacking, real-time content ideas, and founder &amp; personal branding content for leadership voices.</p></div>
+        <div class="svc-card"><div class="svc-num">06</div><h3>Content Experimentation</h3><p>Multiple creative directions, A/B testing hooks, rapid iteration cycles, and voice &amp; narrative design for multi-platform consistency.</p></div>
+      </div>
+
+      <div class="pillar-value">
+        <span class="pv-label">The Real Value</span>
+        <p>Right ideas that make people stop scrolling, feel something instantly, and remember your brand later.</p>
+        <p class="pv-quote"><em>"If it's just content, it gets skipped. If it's a real idea, it stays."</em></p>
+      </div>
+    </article>
+
+    <!-- ── 05 TECH ── -->
+    <article class="pillar-block pillar-alt" id="pillar-tech" data-pillar="05">
+      <div class="pillar-sticky-label" aria-hidden="true">TECH</div>
+
+      <div class="pillar-header">
+        <div class="pillar-badge">05</div>
+        <div class="pillar-header-text">
+          <p class="pillar-kicker">Tech, UX &amp; Digital Experience</p>
+          <h2 class="pillar-name">Tech</h2>
+          <p class="pillar-tagline">From Idea to Interface. From Complexity to Clarity.</p>
+        </div>
+      </div>
+
+      <div class="pillar-intro-statement">We make it real.</div>
+
+      <div class="pillar-philosophy">
+        <div class="philosophy-header">
+          <span class="philosophy-label">HAKAYA TECH PHILOSOPHY</span>
+        </div>
+        <div class="philosophy-grid">
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>We don't build features. We build experiences.</strong> We start with what the user needs, how they feel in this moment, and how we make this effortless.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Simplicity is the ultimate intelligence.</strong> We obsess over reducing steps, effort, and cognitive load until what remains is clarity.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>If it confuses, it loses.</strong> Every second of hesitation is a drop-off, a missed conversion, a broken connection.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Good design is invisible.</strong> Users don't notice the interface. They notice how easy everything feels.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Build fast. Learn faster. Improve constantly.</strong> The only way to build great products is to learn from how people actually use them.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Integration is the new innovation.</strong> Technology that connects data systems, AI engines, and brand ecosystems into a seamless insight-to-experience flow.</p></div>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="svc-card"><div class="svc-num">01</div><h3>Website Design &amp; Development</h3><p>Custom websites, conversion landing pages, e-commerce platforms — all performance-optimised, SEO-ready, and mobile-first.</p></div>
+        <div class="svc-card"><div class="svc-num">02</div><h3>UI &amp; UX Design Systems</h3><p>User journey mapping, wireframes, prototypes, interface design systems, and consistency frameworks that eliminate friction and drop-offs.</p></div>
+        <div class="svc-card"><div class="svc-num">03</div><h3>Product Development</h3><p>MVPs, feature planning, scalable architecture, and continuous iteration cycles. Products built to grow, not just to launch.</p></div>
+        <div class="svc-card"><div class="svc-num">04</div><h3>Chatbots &amp; Conversational AI</h3><p>AI-powered bots for support automation, lead generation, decision assistance, and industry-specific conversational tools.</p></div>
+        <div class="svc-card"><div class="svc-num">05</div><h3>Web Apps &amp; Platforms</h3><p>Custom web applications, dashboards, SaaS products, internal tools, and digital ecosystems that unify every user touchpoint.</p></div>
+        <div class="svc-card"><div class="svc-num">06</div><h3>UX Optimisation &amp; Maintenance</h3><p>User behaviour analysis, funnel optimisation, A/B testing, no-code builds, accessibility design, and continuous improvement cycles.</p></div>
+      </div>
+
+      <div class="pillar-value">
+        <span class="pv-label">The Real Value</span>
+        <p>Intuitive experiences, scalable digital products, and seamless journeys. Ideas are only as powerful as the layer people actually interact with. We make that layer feel effortless.</p>
+        <p class="pv-quote"><em>"The end goal is effortless interaction."</em></p>
+      </div>
+    </article>
+
+    <!-- ── 06 BUSINESS ── -->
+    <article class="pillar-block pillar-alt" id="pillar-business" data-pillar="06">
+      <div class="pillar-sticky-label" aria-hidden="true">BUSINESS</div>
+
+      <div class="pillar-header">
+        <div class="pillar-badge">06</div>
+        <div class="pillar-header-text">
+          <p class="pillar-kicker">Business Strategy, Operations &amp; Execution</p>
+          <h2 class="pillar-name">Business</h2>
+          <p class="pillar-tagline">From Vision to System. From Idea to Outcome.</p>
+        </div>
+      </div>
+
+      <div class="pillar-philosophy">
+        <div class="philosophy-header">
+          <span class="philosophy-label">HAKAYA BUSINESS PHILOSOPHY</span>
+        </div>
+        <div class="philosophy-grid">
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Ideas don't build businesses. Execution does.</strong> What creates real impact is how well it is executed, how consistently delivered, how effectively scaled.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Vision without structure is just ambition.</strong> Big thinking means nothing without clear systems, defined processes, and accountable ownership.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Consistency is the real competitive advantage.</strong> Anyone can deliver once. Very few can deliver repeatedly, reliably, at scale.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Speed matters — but coordination matters more.</strong> Moving fast together is hard. We ensure teams are aligned and dependencies are managed.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Every execution is a brand experience.</strong> Timelines, communication, delivery quality — everything reflects the brand. We treat execution as experience.</p></div>
+          <div class="philo-item"><div class="philo-dot"></div><p><strong>Scale requires systems, not hustle.</strong> Only systems can sustain growth, manage complexity, and deliver consistency. We build infrastructure for growth.</p></div>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="svc-card"><div class="svc-num">01</div><h3>Business Strategy &amp; Growth Planning</h3><p>Market entry strategy, revenue model design, business roadmaps, competitive landscape analysis, and go-to-market execution.</p></div>
+        <div class="svc-card"><div class="svc-num">02</div><h3>Operational Systems &amp; SOPs</h3><p>Workflow structuring, SOP creation, team alignment, efficiency optimisation, and scaling frameworks that grow without breaking.</p></div>
+        <div class="svc-card"><div class="svc-num">03</div><h3>Experiential &amp; Event Operations</h3><p>Large-scale event execution, brand activations, product launches, spatial branding, and on-ground experience management.</p></div>
+        <div class="svc-card"><div class="svc-num">04</div><h3>Partnerships &amp; Business Development</h3><p>Strategic alliances, brand collaborations, sponsorships, revenue partnerships, and sports &amp; entertainment ecosystem integration.</p></div>
+        <div class="svc-card"><div class="svc-num">05</div><h3>Risk &amp; Crisis Management</h3><p>Contingency planning, real-time issue resolution, crisis handling frameworks, and team development with performance alignment.</p></div>
+        <div class="svc-card"><div class="svc-num">06</div><h3>End-to-End Execution Ownership</h3><p>From strategy to planning to execution to optimisation — full ownership of outcomes, not just delivery of tasks.</p></div>
+      </div>
+
+      <div class="pillar-value">
+        <span class="pv-label">The Real Value</span>
+        <p>Ideas executed flawlessly, scaled sustainably, turned into real business outcomes that drive growth.</p>
+        <p class="pv-quote"><em>"If it's not executed right, it doesn't matter. If it is executed right, everything compounds."</em></p>
+      </div>
+    </article>
+
+  </div><!-- /.services-pillars-shell -->
+</section>
+
+
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="assets/images/hakaya-logo.png" alt="Hakayaa" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      <span class="logo-fallback footer-logo-fallback">HAKAYAA</span>
+      <p>Hakayaa helps businesses move from fragmented effort to connected growth.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Pages</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h3>Contact</h3>
+      <p>Email: sales@hakayaa.co.in</p>
+      <p>Phone: +91 9176466366</p>
+      <div class="footer-socials">
+        <img src="assets/images/icon-whatsapp.svg" alt="WhatsApp">
+        <img src="assets/images/icon-linkedin.svg" alt="LinkedIn">
+        <img src="assets/images/icon-facebook.svg" alt="Facebook">
+        <img src="assets/images/icon-instagram.svg" alt="Instagram">
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Hakayaa. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

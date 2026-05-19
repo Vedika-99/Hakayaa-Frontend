@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who We Want To Work With | Hakayaa</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+  :root {
+    --forest:       #1a3025;
+    --forest-deep:  #0d1f14;
+    --forest-mid:   #244734;
+    --forest-light: #2f5638;
+    --gold:         #c9a24a;
+    --gold-soft:    #e5c87f;
+    --gold-dim:     rgba(201,162,74,0.32);
+    --gold-faint:   rgba(201,162,74,0.1);
+    --lavender:     #e7def4;
+    --lavender-mid: #c8b8d8;
+    --cream:        #fdfbf7;
+    --ink:          #111810;
+    --muted:        rgba(255,255,255,0.55);
+    --white:        #ffffff;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--cream);
+    color: var(--forest);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── SECTION WRAPPER ───────────────────────── */
+  .founders-section {
+    position: relative;
+    width: 100%;
+    background: var(--forest-deep);
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Ambient orbs */
+  .founders-section::before {
+    content: "";
+    position: absolute;
+    top: -120px; right: -80px;
+    width: 480px; height: 480px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,162,74,0.14) 0%, transparent 70%);
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .founders-section::after {
+    content: "";
+    position: absolute;
+    bottom: -80px; left: -60px;
+    width: 360px; height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,184,216,0.12) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Grid texture overlay */
+  .founders-geo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image:
+      linear-gradient(rgba(231,222,244,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(231,222,244,0.05) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, #000 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  /* ── HEADER ────────────────────────────────── */
+  .founders-header {
+    position: relative;
+    z-index: 2;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 88px 64px 56px;
+    text-align: center;
+  }
+
+  .founders-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+    opacity: 0;
+    animation: riseUp 0.7s 0.2s ease forwards;
+  }
+  .founders-kicker::before,
+  .founders-kicker::after {
+    content: "";
+    display: block;
+    width: 28px; height: 1px;
+    background: rgba(201,162,74,0.5);
+  }
+
+  .founders-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4.6rem);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    color: var(--lavender);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: riseUp 0.9s 0.4s cubic-bezier(0.16,1,0.3,1) forwards;
+  }
+  .founders-title .accent { color: var(--gold); }
+
+  .founders-divider {
+    width: 0; height: 1px;
+    margin: 0 auto 24px;
+    background: linear-gradient(90deg, transparent, var(--gold), rgba(200,184,216,0.7), transparent);
+    animation: lineExpand 1s 0.9s cubic-bezier(0.16,1,0.3,1) forwards;
+  }
+
+  .founders-sub {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.82;
+    color: rgba(231,222,244,0.68);
+    opacity: 0;
+    animation: riseUp 0.7s 0.7s ease forwards;
+  }
+  .founders-sub em {
+    color: var(--gold-soft);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* ── FOUNDERS GRID ─────────────────────────── */
+  .founders-grid {
+    position: relative;
+    z-index: 2;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 64px 88px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+  }
+
+  /* ── FOUNDER CARD ──────────────────────────── */
+  .founder-card {
+    position: relative;
+    min-height: 380px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+      opacity 0.75s ease,
+      transform 0.75s cubic-bezier(0.16,1,0.3,1);
+  }
+
+  .founder-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .founder-card:nth-child(1) { transition-delay: 0.08s; }
+  .founder-card:nth-child(2) { transition-delay: 0.18s; }
+  .founder-card:nth-child(3) { transition-delay: 0.28s; }
+  .founder-card:nth-child(4) { transition-delay: 0.38s; }
+
+  /* Photo fill */
+  .founder-photo {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center top;
+    transition: transform 0.65s ease;
+  }
+  .founder-card:hover .founder-photo {
+    transform: scale(1.06);
+  }
+
+  /* Gradient overlays */
+  .founder-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(10,24,16,0.12) 0%,
+      rgba(10,24,16,0.28) 40%,
+      rgba(10,24,16,0.82) 80%,
+      rgba(10,24,16,0.96) 100%
+    );
+  }
+
+  /* Accent line on top */
+  .founder-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    z-index: 4;
+    background: linear-gradient(90deg, var(--gold), var(--lavender-mid), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+  }
+  .founder-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  /* Card content */
+  .founder-content {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px 30px;
+  }
+
+  /* Number badge */
+  .founder-num {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--gold-dim);
+    background: rgba(201,162,74,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+  }
+
+  .founder-tag {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--gold-dim);
+    background: rgba(201,162,74,0.1);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .founder-name {
+    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+    font-weight: 700;
+    line-height: 0.96;
+    letter-spacing: 0.01em;
+    color: var(--white);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .founder-description {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: rgba(231,222,244,0.72);
+    max-width: 340px;
+    margin-bottom: 14px;
+  }
+
+  .founder-traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .founder-trait {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(255,255,255,0.06);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(231,222,244,0.7);
+    transition: background 0.25s, border-color 0.25s, color 0.25s;
+  }
+  .founder-card:hover .founder-trait {
+    background: rgba(201,162,74,0.1);
+    border-color: var(--gold-dim);
+    color: var(--gold-soft);
+  }
+
+  .founder-dot {
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* Hover overlay CTA */
+  .founder-cta {
+    position: absolute;
+    bottom: 28px; right: 28px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+  .founder-card:hover .founder-cta {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .founder-cta svg {
+    transition: transform 0.3s ease;
+  }
+  .founder-card:hover .founder-cta svg {
+    transform: translateX(4px);
+  }
+
+  /* ── PLACEHOLDER PHOTOS (gradient-based) ────── */
+  .founder-card:nth-child(1) .founder-photo {
+    background:
+      radial-gradient(ellipse at 40% 30%, rgba(180,120,80,0.6), transparent 55%),
+      linear-gradient(160deg, #1a2e1e 0%, #2f5638 50%, #3a6040 100%);
+  }
+  .founder-card:nth-child(2) .founder-photo {
+    background:
+      radial-gradient(ellipse at 60% 25%, rgba(120,90,160,0.5), transparent 55%),
+      linear-gradient(155deg, #0d1f14 0%, #244734 50%, #1a3530 100%);
+  }
+  .founder-card:nth-child(3) .founder-photo {
+    background:
+      radial-gradient(ellipse at 30% 40%, rgba(160,130,60,0.55), transparent 55%),
+      linear-gradient(155deg, #1a2010 0%, #3a3020 50%, #2a4020 100%);
+  }
+  .founder-card:nth-child(4) .founder-photo {
+    background:
+      radial-gradient(ellipse at 55% 30%, rgba(60,90,140,0.55), transparent 55%),
+      linear-gradient(155deg, #0d1014 0%, #1a2234 50%, #223050 100%);
+  }
+
+  /* ── SILHOUETTE ICONS ──────────────────────── */
+  .founder-silhouette {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    opacity: 0.22;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+  .founder-card:hover .founder-silhouette {
+    opacity: 0.1;
+  }
+
+  /* ── CLOSING BAND ──────────────────────────── */
+  .founders-closing {
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid rgba(231,222,244,0.1);
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 40px 64px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .closing-statement {
+    font-size: clamp(1rem, 1.8vw, 1.18rem);
+    line-height: 1.75;
+    color: rgba(231,222,244,0.65);
+    max-width: 580px;
+  }
+  .closing-statement strong {
+    color: var(--gold-soft);
+    font-weight: 600;
+  }
+
+  .closing-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 30px;
+    border-radius: 999px;
+    border: 1px solid var(--gold-dim);
+    background: var(--gold);
+    color: var(--forest-deep);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.25s, transform 0.25s, box-shadow 0.25s, color 0.25s;
+    box-shadow: 0 8px 28px rgba(201,162,74,0.3);
+  }
+  .closing-cta:hover {
+    background: var(--gold-soft);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(201,162,74,0.4);
+  }
+  .closing-cta svg {
+    transition: transform 0.3s ease;
+  }
+  .closing-cta:hover svg {
+    transform: translateX(4px);
+  }
+
+  /* ── STATS ROW ─────────────────────────────── */
+  .founders-stats {
+    position: relative;
+    z-index: 2;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 64px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(231,222,244,0.08);
+    border: 1px solid rgba(231,222,244,0.08);
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 56px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .founders-stats.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .stat-cell {
+    padding: 28px 24px;
+    background: rgba(255,255,255,0.03);
+    text-align: center;
+    transition: background 0.25s;
+  }
+  .stat-cell:hover {
+    background: rgba(201,162,74,0.07);
+  }
+  .stat-num {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(231,222,244,0.5);
+    line-height: 1.45;
+  }
+
+  /* ── KEYFRAMES ─────────────────────────────── */
+  @keyframes riseUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes lineExpand {
+    to { width: 300px; }
+  }
+
+  /* ── RESPONSIVE ────────────────────────────── */
+  @media (max-width: 900px) {
+    .founders-header { padding: 64px 24px 40px; }
+    .founders-grid { padding: 0 24px 64px; gap: 2px; }
+    .founders-closing { padding: 32px 24px 56px; flex-direction: column; align-items: flex-start; }
+    .founders-stats { margin: 0 24px 48px; grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    .founders-grid { grid-template-columns: 1fr; }
+    .founder-card { min-height: 300px; }
+    .founders-stats { grid-template-columns: repeat(2, 1fr); }
+    .founders-header { padding: 52px 18px 32px; }
+    .founders-grid { padding: 0 0 52px; }
+    .founders-closing { padding: 28px 18px 48px; }
+    .founders-stats { margin: 0 0 40px; }
+  }
+
+  /* ── DEMO FRAME ────────────────────────────── */
+  .demo-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 64px;
+    background: rgba(253,251,247,0.97);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(36,71,52,0.1);
+  }
+  .demo-logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    color: var(--forest);
+  }
+  .demo-logo span { color: var(--gold); }
+  .demo-nav-links {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+  }
+  .demo-nav-links a {
+    display: block;
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--forest);
+    background: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .demo-nav-links a:hover,
+  .demo-nav-links a.active {
+    background: var(--forest);
+    color: var(--gold-soft);
+  }
+
+  @media (max-width: 640px) {
+    .demo-nav { padding: 12px 18px; }
+    .demo-nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Demo nav for context -->
+<nav class="demo-nav">
+  <div class="demo-logo">HAKA<span>YAA</span></div>
+  <ul class="demo-nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Team</a></li>
+    <li><a href="#" class="active">Industries</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- FOUNDERS SECTION -->
+<section class="founders-section" id="founders">
+  <div class="founders-geo" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <div class="founders-header">
+    <p class="founders-kicker">Who We Want To Work With</p>
+    <h2 class="founders-title">Stories We <span class="accent">Want To Write</span></h2>
+    <div class="founders-divider" aria-hidden="true"></div>
+    <p class="founders-sub">
+      We work with a limited number of brands at a time — so we can go <em>deep, not just fast.</em>
+      Here are the kinds of stories we're built to tell.
+    </p>
+  </div>
+
+  <!-- Stats -->
+  <div class="founders-stats" id="foundersStats">
+    <div class="stat-cell">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Brand Archetypes<br>We Champion</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">∞</div>
+      <div class="stat-label">Stories<br>Left To Tell</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">1</div>
+      <div class="stat-label">Team.<br>End-to-End.</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Generic<br>Campaigns</div>
+    </div>
+  </div>
+
+  <!-- Founders Grid -->
+  <div class="founders-grid" id="foundersGrid">
+
+    <!-- Card 1 -->
+    <div class="founder-card" tabindex="0" role="article" aria-label="Founders Who Want Real Growth">
+      <div class="founder-photo">
+        <!-- Silhouette placeholder -->
+        <svg class="founder-silhouette" width="120" height="200" viewBox="0 0 120 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="60" cy="44" rx="30" ry="34" fill="white"/>
+          <path d="M10 180 C10 130 30 110 60 110 C90 110 110 130 110 180Z" fill="white"/>
+        </svg>
+      </div>
+      <div class="founder-content">
+        <div class="founder-num">01</div>
+        <span class="founder-tag">
+          <span class="founder-dot"></span>
+          Archetype
+        </span>
+        <h3 class="founder-name">Founders Who Want Real Growth</h3>
+        <p class="founder-description">
+          Building something meaningful but the brand doesn't reflect the vision yet. You know what you're building — you just need the world to see it too.
+        </p>
+        <div class="founder-traits">
+          <span class="founder-trait"><span class="founder-dot"></span>Vision-first</span>
+          <span class="founder-trait"><span class="founder-dot"></span>Long-term bet</span>
+          <span class="founder-trait"><span class="founder-dot"></span>Story-ready</span>
+        </div>
+      </div>
+      <span class="founder-cta" aria-hidden="true">
+        Start here
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="founder-card" tabindex="0" role="article" aria-label="Brands That Feel Stuck or Unclear">
+      <div class="founder-photo"></div>
+      <div class="founder-content">
+        <div class="founder-num">02</div>
+        <span class="founder-tag">
+          <span class="founder-dot"></span>
+          Archetype
+        </span>
+        <h3 class="founder-name">Brands That Feel Stuck or Unclear</h3>
+        <p class="founder-description">
+          Good product. Good team. But the messaging is muddled, the positioning is fuzzy, and growth has plateaued. The story needs a reset.
+        </p>
+        <div class="founder-traits">
+          <span class="founder-trait"><span class="founder-dot"></span>Ready to pivot</span>
+          <span class="founder-trait"><span class="founder-dot"></span>Quality product</span>
+          <span class="founder-trait"><span class="founder-dot"></span>Needs clarity</span>
+        </div>
+      </div>
+      <span class="founder-cta" aria-hidden="true">
+        Start here
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="founder-card" tabindex="0" role="article" aria-label="Teams Tired of Multiple Agencies">
+      <div class="founder-photo"></div>
+      <div class="founder-content">
+        <div class="founder-num">03</div>
+        <span class="founder-tag">
+          <span class="founder-dot"></span>
+          Archetype
+        </span>
+        <h3 class="founder-name">Teams Tired of Multiple Agencies</h3>
+        <p class="founder-description">
+          Six vendors, six voices, zero alignment. You want one team that speaks with one strategic mind — creative, data, tech, execution, all in sync.
+        </p>
+        <div class="founder-traits">
+          <span class="founder-trait"><span class="founder-dot"></span>Ecosystem thinkers</span>
+          <span class="founder-trait"><span class="founder-dot"></span>Efficiency-first</span>
+          <span class="founder-trait"><span class="founder-dot"></span>Results-driven</span>
+        </div>
+      </div>
+      <span class="founder-cta" aria-hidden="true">
+        Start here
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="founder-card" tabindex="0" role="article" aria-label="Businesses Focused on Long-Term Results">
+      <div class="founder-photo"></div>
+      <div class="founder-content">
+        <div class="founder-num">04</div>
+        <span class="founder-tag">
+          <span class="founder-dot"></span>
+          Archetype
+        </span>
+        <h3 class="founder-name">Businesses Focused on Long-Term Results</h3>
+        <p class="founder-description">
+          You're not looking for a viral moment. You're building a brand that compounds — one that people remember, return to, and talk about for years.
+        </p>
+        <div class="founder-traits">
+          <span class="founder-trait"><span class="founder-dot"></span>Patient capital</span>
+          <span class="founder-trait"><span class="founder-dot"></span>Brand builders</span>
+          <span class="founder-trait"><span class="founder-dot"></span>Legacy focus</span>
+        </div>
+      </div>
+      <span class="founder-cta" aria-hidden="true">
+        Start here
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </div>
+
+  </div>
+
+  <!-- Closing band -->
+  <div class="founders-closing">
+    <p class="closing-statement">
+      We work with a <strong>limited number of brands at a time</strong> so we can go deep, not just fast.
+      Fewer handoffs, stronger thinking, and a team that moves like one studio instead of six separate vendors.
+    </p>
+    <a href="contact.html" class="closing-cta">
+      Begin Your Story
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+
+</section>
+
+<script>
+  // Intersection observer for scroll reveals
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.founder-card, .founders-stats').forEach(el => io.observe(el));
+
+  // Keyboard accessibility for cards
+  document.querySelectorAll('.founder-card').forEach(card => {
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        window.location.href = 'contact.html';
+      }
+    });
+  });
+</script>
+</body>
+</html>

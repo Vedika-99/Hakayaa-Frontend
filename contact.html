@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Hakayaa</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="contact-page">
+
+<div class="cursor-dot" id="cursorDot"></div>
+
+<nav class="navbar" id="navbar">
+  <a class="logo" href="index.html" aria-label="Hakayaa Home">
+    <img src="assets/images/hakaya-logo.png" alt="Hakayaa logo">
+  </a>
+  <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="site-navigation">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="team.html">Team</a></li>
+    <!-- <li><a href="industries.html">Industries</a></li> -->
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section class="contact-hero" aria-label="Contact Hakayaa">
+    <div class="ch-geo" aria-hidden="true"></div>
+    <!-- <div class="ch-orb ch-orb-1" aria-hidden="true"></div>
+    <div class="ch-orb ch-orb-2" aria-hidden="true"></div>
+    <div class="ch-orb ch-orb-3" aria-hidden="true"></div> -->
+
+    <div class="contact-hero-inner">
+      <div class="ch-copy">
+        <p class="ch-eyebrow">Contact Hakayaa</p>
+
+        <h1 class="ch-title">
+          Bring us<br>the growth
+          <span class="accent">problem.</span>
+        </h1>
+
+        <div class="ch-divider" aria-hidden="true"></div>
+
+        <p class="ch-sub">
+          If your brand needs a more connected system across <em>insight, story, tech and execution</em> &mdash; this is where the conversation starts.
+        </p>
+
+        <div class="ch-info-tiles">
+          <div class="ch-tile">
+            <div class="ch-tile-icon">&#9993;</div>
+            <div>
+              <p class="ch-tile-label">Email</p>
+              <p class="ch-tile-value">sales@hakayaa.co.in</p>
+            </div>
+          </div>
+          <div class="ch-tile">
+            <div class="ch-tile-icon">&#9742;</div>
+            <div>
+              <p class="ch-tile-label">Phone</p>
+              <p class="ch-tile-value">+91 9176466366</p>
+            </div>
+          </div>
+          <div class="ch-tile">
+            <div class="ch-tile-icon">&#9673;</div>
+            <div>
+              <p class="ch-tile-label">Based in</p>
+              <p class="ch-tile-value">India &mdash; working globally</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ch-form-card" role="region" aria-label="Contact form">
+        <p class="ch-form-label">Send a message</p>
+
+        <form class="contact-form" data-contact-form novalidate>
+          <div class="cf-group">
+            <label for="contact-name">Your Name</label>
+            <div class="cf-input-wrap">
+              <span class="cf-icon" aria-hidden="true">&#9672;</span>
+              <input class="cf-input" type="text" id="contact-name" name="name" placeholder="e.g. Priya Sharma" required>
+            </div>
+          </div>
+
+          <div class="cf-row">
+            <div class="cf-group">
+              <label for="contact-email">Email</label>
+              <div class="cf-input-wrap">
+                <span class="cf-icon" aria-hidden="true">@</span>
+                <input class="cf-input" type="email" id="contact-email" name="email" placeholder="you@company.com" required>
+              </div>
+            </div>
+            <div class="cf-group">
+              <label for="contact-mobile">Mobile</label>
+              <div class="cf-input-wrap">
+                <span class="cf-icon" aria-hidden="true">&#9678;</span>
+                <input class="cf-input" type="tel" id="contact-mobile" name="phone" placeholder="10-digit number" inputmode="numeric" pattern="[0-9]{10,15}" maxlength="15" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="cf-group cf-textarea-wrap">
+            <label for="contact-message">Tell us the problem</label>
+            <div class="cf-input-wrap">
+              <span class="cf-icon" aria-hidden="true">&#9998;</span>
+              <textarea class="cf-input textarea" id="contact-message" name="message" rows="5" placeholder="What's the growth challenge you're trying to solve?" required></textarea>
+            </div>
+          </div>
+
+          <button class="cf-submit" type="submit" data-submit-button>
+            <span>Send Message</span>
+            <svg class="cf-submit-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <p class="contact-form-status" data-form-status aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="ch-scroll" aria-hidden="true">
+      <!-- <div class="ch-scroll-line"></div> -->
+      <!-- <span>Scroll</span> -->
+    </div>
+  </section>
+
+  <section class="contact-bottom" aria-label="What to expect">
+    <div class="cb-inner">
+      <div class="cb-left js-fade">
+        <p class="cb-kicker">Before You Reach Out</p>
+        <h2 class="cb-title">We work with <span>a limited</span> number of brands.</h2>
+        <p class="cb-body">
+          We go deep, not wide. That means fewer handoffs, stronger thinking, and a team that moves like one studio. We want to understand your real challenge &mdash; not just take a brief.
+        </p>
+        <div class="cb-chips">
+          <div class="cb-chip"><div class="cb-chip-dot"></div> Founders Who Want Real Growth</div>
+          <div class="cb-chip"><div class="cb-chip-dot"></div> Brands That Feel Stuck</div>
+          <div class="cb-chip"><div class="cb-chip-dot"></div> Teams Tired Of Multiple Agencies</div>
+          <div class="cb-chip"><div class="cb-chip-dot"></div> Long-Term Focus</div>
+        </div>
+      </div>
+
+      <div>
+        <p class="cb-kicker cb-process-kicker js-fade">How It Works</p>
+        <div class="cb-process">
+          <div class="cb-step" data-delay="0">
+            <div class="cb-step-num">01</div>
+            <div class="cb-step-text">You send us the problem &mdash; not a brief</div>
+            <div class="cb-step-arr">&rarr;</div>
+          </div>
+          <div class="cb-step" data-delay="1">
+            <div class="cb-step-num">02</div>
+            <div class="cb-step-text">We get on a call within 48 hours</div>
+            <div class="cb-step-arr">&rarr;</div>
+          </div>
+          <div class="cb-step" data-delay="2">
+            <div class="cb-step-num">03</div>
+            <div class="cb-step-text">We uncover what's really going on</div>
+            <div class="cb-step-arr">&rarr;</div>
+          </div>
+          <div class="cb-step" data-delay="3">
+            <div class="cb-step-num">04</div>
+            <div class="cb-step-text">We propose a connected solution</div>
+            <div class="cb-step-arr">&rarr;</div>
+          </div>
+          <div class="cb-step" data-delay="4">
+            <div class="cb-step-num">05</div>
+            <div class="cb-step-text">We build the story together</div>
+            <div class="cb-step-arr">&rarr;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="assets/images/hakaya-logo.png" alt="Hakayaa logo">
+      <p>Hakayaa helps businesses move from fragmented effort to connected growth.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Pages</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="industries.html">Industries</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h3>Contact</h3>
+      <p>Email: sales@hakayaa.co.in</p>
+      <p>Phone: +91 9176466366</p>
+      <div class="footer-socials" aria-label="Hakayaa social links">
+        <img src="assets/images/icon-whatsapp.svg" alt="WhatsApp">
+        <img src="assets/images/icon-linkedin.svg" alt="LinkedIn">
+        <img src="assets/images/icon-facebook.svg" alt="Facebook">
+        <img src="assets/images/icon-instagram.svg" alt="Instagram">
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Hakayaa. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
