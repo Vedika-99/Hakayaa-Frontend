@@ -2,11 +2,17 @@
 const scrollSections = document.querySelectorAll(".scroll-section:not(.pillar-section):not(.brands-section):not(.familiar-section):not(.proof-section)");
 const cards = document.querySelectorAll(".card");
 const reveals = document.querySelectorAll(".reveal");
+const supportsFineHoverPointer = () => !window.matchMedia || window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
 const initializeCursorDot = () => {
 const dot = document.querySelector(".cursor-dot");
 
 if (!dot) {
+return;
+}
+
+if (!supportsFineHoverPointer()) {
+dot.classList.remove("is-visible", "visible", "is-hovering", "hovering");
 return;
 }
 
@@ -1240,6 +1246,11 @@ const initCursorDot = () => {
   const dot = document.querySelector('.cursor-dot');
   if (!dot) return;
 
+  if (!supportsFineHoverPointer()) {
+    dot.classList.remove('is-visible', 'visible', 'is-hovering', 'hovering');
+    return;
+  }
+
   let x = window.innerWidth / 2;
   let y = window.innerHeight / 2;
   let mouseX = x, mouseY = y;
@@ -1772,7 +1783,7 @@ const initializeTeamPage = () => {
   document.body.dataset.teamPageReady = "true";
 
   const dot = document.getElementById("cursorDot");
-  if (dot) {
+  if (dot && supportsFineHoverPointer()) {
     let cx = window.innerWidth / 2;
     let cy = window.innerHeight / 2;
     let mx = cx;
@@ -1804,6 +1815,8 @@ const initializeTeamPage = () => {
     };
 
     renderCursor();
+  } else if (dot) {
+    dot.classList.remove("is-visible", "visible", "is-hovering", "hovering");
   }
 
   const nav = document.getElementById("navbar");
@@ -1884,7 +1897,7 @@ const initializeContactPage = () => {
 
   const dot = document.getElementById("cursorDot");
   let scale = 1;
-  if (dot) {
+  if (dot && supportsFineHoverPointer()) {
     let cx = window.innerWidth / 2;
     let cy = window.innerHeight / 2;
     let mx = cx;
@@ -1904,8 +1917,11 @@ const initializeContactPage = () => {
     };
 
     renderCursor();
+  } else if (dot) {
+    dot.classList.remove("is-visible", "visible", "is-hovering", "hovering");
   }
 
+  if (dot && supportsFineHoverPointer()) {
   document.querySelectorAll(".contact-page a, .contact-page button, .contact-page .ch-tile, .contact-page .cb-chip").forEach((element) => {
     element.addEventListener("mouseenter", () => {
       scale = 2.2;
@@ -1916,6 +1932,7 @@ const initializeContactPage = () => {
       dot?.classList.remove("is-hovering");
     });
   });
+  }
 
   const navbar = document.getElementById("navbar");
   const navToggle = document.getElementById("navToggle");

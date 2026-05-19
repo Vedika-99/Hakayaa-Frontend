@@ -50,6 +50,12 @@
     0 0 32px rgba(201, 168, 76, 0.55),
     0 0 58px rgba(201, 168, 76, 0.3);
 }
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot {
+    display: none !important;
+  }
+}
 @font-face{
 font-family:"Hakaya Impact";
 src:url("../assets/fonts/impact.ttf") format("truetype");
@@ -8888,5 +8894,47 @@ body.services-page .services-pillars-shell {
   }
   body.services-page .services-closing {
     padding: 56px 24px 56px;
+  }
+}
+
+@media (max-width: 900px) {
+  body .navbar,
+  body.home-page .navbar,
+  body.services-page .navbar,
+  body.team-page .navbar,
+  body.about-page .navbar,
+  body.contact-page .navbar {
+    display: grid !important;
+    grid-template-columns: minmax(0, auto) auto !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    width: 100% !important;
+    padding: 10px 18px !important;
+    background: transparent !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  body .navbar .logo {
+    justify-self: start !important;
+    grid-column: 1 !important;
+  }
+
+  body .navbar .logo img {
+    max-height: 52px;
+    width: auto;
+  }
+
+  body .navbar .nav-toggle {
+    display: inline-flex !important;
+    justify-self: end !important;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+
+  body .navbar .nav-links {
+    grid-column: 1 / -1;
   }
 }
