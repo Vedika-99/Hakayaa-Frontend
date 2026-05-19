@@ -906,7 +906,7 @@ return;
 const controller = new AbortController();
 const timeoutId = window.setTimeout(() => {
 controller.abort();
-}, 10000);
+}, 60000);
 
 try {
 isSubmitting = true;
@@ -941,7 +941,7 @@ setStatus("Thanks. Your message has been sent successfully.", "is-success");
 console.error("[contact-form] Submission failed", error);
 
 if (error.name === "AbortError") {
-setStatus("Request timed out. Please try again.", "is-error");
+setStatus("The message is taking longer than expected. Please check your sheet before trying again.", "is-error");
 } else {
 setStatus(error.message || "Unable to submit the form right now. Please try again.", "is-error");
 }
@@ -2072,7 +2072,7 @@ const initializeContactPage = () => {
     setStatus("", "");
 
     const controller = new AbortController();
-    const timeoutId = window.setTimeout(() => controller.abort(), 10000);
+    const timeoutId = window.setTimeout(() => controller.abort(), 60000);
 
     try {
       console.log(`[contact-form] POST ${submitEndpoint}`);
@@ -2096,7 +2096,7 @@ const initializeContactPage = () => {
       setStatus("Message sent. We'll be in touch within 48 hours.", "is-success");
     } catch (error) {
       console.error("[contact-form] Submission failed:", error);
-      setStatus(error.name === "AbortError" ? "Request timed out. Please try again." : (error.message || "Unable to submit right now. Please try again."), "is-error");
+      setStatus(error.name === "AbortError" ? "The message is taking longer than expected. Please check your sheet before trying again." : (error.message || "Unable to submit right now. Please try again."), "is-error");
     } finally {
       window.clearTimeout(timeoutId);
       busy = false;
